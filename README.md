@@ -1,6 +1,7 @@
-# Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Proje development modundadır. Başlatmak için root da konsoldan 'npm start' komunutunu kullanabilirsiniz.
+Tarayıcınızdan 'http://localhost:3000' i ziyaret edebilirsiniz. 
 
 ## Available Scripts
 
