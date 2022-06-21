@@ -41,7 +41,7 @@ const Postlink = () => {
             <input type={'url'} placeholder="e.g. http://abc.xyz" required onChange={event => setLinkUrl(event.target.value)} />
             <br/>
             <button className='submit buttonType1' onClick={() => {
-                dispatch(addLink({id: lastId + 1, name: linkName, url: linkUrl, points: 0}))
+                dispatch(addLink({id: lastId + 1, name: linkName, url: linkUrl, points: 0, upvoted: false, downvoted: false}))
             }}>Submit</button>
         </div>
         <ToastContainer></ToastContainer>
