@@ -49,6 +49,12 @@ export const linkSlice = createSlice({
                         localStorage.setItem("Links", JSON.stringify(state)); 
                         }
                     }
+                    else if((action.payload.buttonName === "upvote") && link.upvoted === true) {
+                        link.points =  link.points - 1;
+                        link.upvoted = false;
+                        link.downvoted = false;
+                        localStorage.setItem("Links", JSON.stringify(state));
+                    } 
                     else if((action.payload.buttonName === "downvote") && link.downvoted !== true){
                         if(link.upvoted !== true) {
                         link.points =  link.points - 1;
@@ -62,6 +68,12 @@ export const linkSlice = createSlice({
                         link.upvoted = false;
                         localStorage.setItem("Links", JSON.stringify(state)); 
                         }
+                    }
+                    else if ((action.payload.buttonName === "downvote") && link.downvoted === true) {
+                        link.points =  link.points + 1;
+                        link.downvoted = false;
+                        link.upvoted = false;
+                        localStorage.setItem("Links", JSON.stringify(state));
                     }                  
                 }
             });
